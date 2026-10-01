@@ -17,7 +17,7 @@ from .authentication import CustomJWTAuthentication
 
 
 class ProductViewSet(viewsets.ModelViewSet):
-   # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset=Product.objects.prefetch_related("images")
     serializer_class=ProductSerializer
 
